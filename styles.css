@@ -175,7 +175,11 @@ span {
    font-weight: bold;
 }
 
-@media (max-width: 1300px) {
+@media (max-width: 500px) {
+
+   p, figcaption, span {
+      font-size: 18px;
+   }
 
    .hero {
       grid-template: 1fr 1fr 400px 50px / 1fr;
@@ -195,9 +199,13 @@ span {
       grid-area: 3/1/4/2;
    }
 
+   .image {
+      width: auto;
+      max-width: 100%;
+   }
+
    .biography__title, .biography__text {
       padding: 0 15px;
-      /* color: red; */
    }
    .achievements__container {
       padding: 0 15px;
