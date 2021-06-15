@@ -76,7 +76,7 @@ body::-webkit-scrollbar-track {
    gap: 10px 0; */
    flex-direction: column;
    align-items: center;
-   justify-content: space-between;
+   justify-content: start;
    background-color: rgb(234, 244, 248);
 }
 
@@ -85,8 +85,10 @@ body::-webkit-scrollbar-track {
 /* hero starts here */
 
 .hero {
+   width: 100%;
+   max-width: 1300px;
    /* grid-area: hero; */
-   margin: 10px 0;
+   margin: 0 0 10px;
 }
 
 .hero__title {
@@ -102,12 +104,10 @@ body::-webkit-scrollbar-track {
 }
 
 
-.image__container {
-
-}
-
 .image {
-   max-width: 100vw;
+   width: 100vw;
+   max-width: 1300px;
+   max-height: 650px;
 }
 
 /* hero ends here */
@@ -116,13 +116,19 @@ body::-webkit-scrollbar-track {
 /* tribute main info starts here */
 
 .tribute__info {
+   width: 100%;
+   max-width: 1300px;
    margin: 0 10px;
    /* padding: 10px 0; */
 }
 
 .biography__container, .achievements__container {
-   margin: 10px 0 15px;
+   margin: 10px 0 10px;
    /* padding: 10px 0; */
+}
+
+.biography__text {
+   padding: 10px 0 0;
 }
 
 .achievements__text {
@@ -135,6 +141,8 @@ body::-webkit-scrollbar-track {
 /* extra info starts here */
 
 .tribute__extraInfo {
+   width: 100%;
+   max-width: 1300px;
    margin: 10px 0;
 }
 
@@ -143,11 +151,45 @@ body::-webkit-scrollbar-track {
    font-weight: bold;
    text-align: center;
    margin: 0 0 15px;
+   padding: 0 20px;
 }
 
 .tribute__extraInfo span {
+   text-align: left;
    font-weight: bold;
    padding: 0 20px;
 }
 
 /* extra info ends here */
+
+
+/* media queries */
+
+@media(min-width: 800px) {
+   .hero {
+      width: 100%;
+      height: fit-content;
+      display: grid;
+      grid-template: 1fr repeat(2, minmax(auto, auto)) 1fr / 1fr 1fr;
+      /* gap: 15px; */
+      justify-items: center;
+      align-items: start;
+   }
+
+   .hero__title {
+      color: var(--hero-font-color);
+      grid-area: 2/1/3/2;
+      z-index: 1;
+   }
+
+   .hero__description {
+      color: var(--hero-font-color);
+      align-self: center;
+      grid-area: 3/1/4/2;
+      z-index: 1;
+   }
+
+   .image__container {
+      grid-area: 1/1/5/3;
+   }
+}
