@@ -105,6 +105,7 @@ body::-webkit-scrollbar-track {
 
 
 .image {
+   display: block;
    width: 100vw;
    max-width: 1300px;
    max-height: 650px;
@@ -124,7 +125,7 @@ body::-webkit-scrollbar-track {
 
 .biography__container, .achievements__container {
    margin: 10px 0 10px;
-   /* padding: 10px 0; */
+   padding: 0 10px 10px;
 }
 
 .biography__text {
@@ -132,7 +133,7 @@ body::-webkit-scrollbar-track {
 }
 
 .achievements__text {
-   padding: 10px 20px;
+   padding: 10px 0 0;
 }
 
 /* tribute main info ends here */
