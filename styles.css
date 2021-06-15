@@ -175,11 +175,21 @@ span {
    font-weight: bold;
 }
 
-@media (max-width: 550px) {
-
+@media (max-width: 1300px) {
+   .biography__title, .biography__text {
+      padding: 0 15px;
+   }
+   .achievements__container {
+      padding: 0 15px;
+   }
+   
    p, figcaption, span {
       font-size: 18px;
    }
+}
+
+@media (max-width: 550px) {
+
 
    .hero {
       /* grid-template: 1fr 1fr 400px 50px / 1fr; */
@@ -207,12 +217,5 @@ span {
       width: auto;
       max-width: 100%;
       max-height: 250px;
-   }
-
-   .biography__title, .biography__text {
-      padding: 0 15px;
-   }
-   .achievements__container {
-      padding: 0 15px;
    }
 }
