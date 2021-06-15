@@ -133,7 +133,7 @@ body::-webkit-scrollbar-track {
 }
 
 .achievements__text {
-   padding: 10px 0 0;
+   padding: 10px 20px 0;
 }
 
 /* tribute main info ends here */
@@ -192,5 +192,10 @@ body::-webkit-scrollbar-track {
 
    .image__container {
       grid-area: 1/1/5/3;
+   }
+
+   .biography__container, .achievements__container {
+      /* margin: 10px 0 10px; */
+      padding: 0 0 10px;
    }
 }
